@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            
+            height: 10%;
+        }
+        h1,p{
+            color: darkgray;
+
+        }
+
+        button{
+            background-color: blanchedalmond;
+            text-decoration: solid;
+        }
+    </style>
+</head>
+<body>
+    
+   <h1>Available only 5 Slot</h1>
+    <p id="demo"></p>
+
+   <button onclick=carslot()>Slot 1</button><br>
+   <br>
+   <p id="demo1"></p>
+
+   <button onclick=carslot1()>slot 2</button><br>
+   
+   <br>
+   <p id="demo2"></p>
+
+   <button onclick=carslot2()>slot 3</button><br>
+   <br>
+   <p id="demo3"></p>
+
+   <button onclick=carslot3()>slot 4</button><br>
+   <br>
+   <p id="demo4"></p>
+
+   <button onclick=carslot4()>slot 5</button><br>
+   <br>
+   <p id="demo5"></p>
+
+   <button onclick=carslotFull()>Add Slot</button>
+   <p id= "car"></p>
+
+
+   <button onclick="carExit()">Remove 1 slot</button>
+   <p id="demo_6"></p>
+   
+  
+
+
+   <script>
+
+        var input = ['KA-01-HH-1234','KA-01-HH-9999','KA-01-BB-0001','KA-01-HH-7777',' KA-01-HH-2701','KA-01-HH-3141']
+     
+        function carslot(){
+            
+            var any = document.getElementById("demo");
+            any.innerHTML=input[0];
+        }
+        
+
+        function carslot1(){
+
+            document.getElementById("demo1").innerHTML=input[1];
+        }
+      
+        function carslot2(){
+
+            document.getElementById("demo2").innerHTML=input[2];
+        }
+
+        function carslot3(){
+
+            document.getElementById("demo3").innerHTML=input[3];
+        }   
+
+        function carslot4(){
+
+            document.getElementById("demo4").innerHTML=input[4];
+        }
+
+        function carslotFull(){
+           
+           var pushing =input.push("TN54U6008");
+           document.getElementById("car").innerHTML="Sorry Slots are full"+ "  " +"Wait" + " "+input[6];
+
+        }
+        function carExit(){
+            
+            var poping =input.shift();
+    
+            var pushing =input.unshift("TN54U6008");
+            var dvd = "Your car allocate slot 1";
+            console.log(pushing);
+            
+            document.getElementById("demo").innerHTML=  dvd + " "+input[0];
+
+        }
+       
+
+    
+    
+    </script>
+    
+</body>
+</html>
